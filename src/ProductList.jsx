@@ -5,6 +5,9 @@ function ProductList({ onHomeClick }) {
     const [showCart, setShowCart] = useState(false);
     const [showPlants, setShowPlants] = useState(false); // State to control the visibility of the About Us page
 
+    dispatch(addItem(product));
+    dispatch(removeItem(item.name));
+
     const plantsArray = [
         {
             category: "Air Purifying Plants",
@@ -262,8 +265,10 @@ function ProductList({ onHomeClick }) {
           [product.name]: true, // Set the current product's name as a key with value 'true' to mark it as added
         }));
       };
+      const calculateTotalQuantity = () => {
+        return CartItems ? CartItems.reduce((total, item) => total + item.quantity, 0) : 0;
+         };
 
-      
     const [addedToCart, setAddedToCart] = useState({});
 
     return (
