@@ -210,6 +210,20 @@ body {
     transition-duration: 0.4s;
     cursor: pointer;
   }
+
+  .product-button-desactive {
+    background-color: grey; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
   
   .product-button:hover {
     background-color: #45a049;
@@ -250,3 +264,16 @@ body {
         text-align: center; /* Align text to the center */
       }
   }
+
+  .badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: bold;
+}
+
